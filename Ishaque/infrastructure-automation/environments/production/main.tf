@@ -86,8 +86,8 @@ module "ecs" {
   task_cpu         = 1024
   task_mem         = 2048
   #task_def_ecr_repository_url = module.ecr.ecr_repository_url
-  #task_def_ecr_repository_url = "nginx"
-  task_def_ecr_repository_url = "ghcr.io/mealie-recipes/mealie:v2.0.0"
+  task_def_ecr_repository_url = "nginx"
+  #task_def_ecr_repository_url = "ghcr.io/mealie-recipes/mealie:v2.0.0"
   ecs_execution_role_arn      = module.iam.ecs_task_execution_role_arn
   ecs_svc_name                = "prod-mealie-app"
   ecs_desired_count           = 1
