@@ -19,7 +19,7 @@ module "vpc" {
 module "ec2" {
   source          = "../../modules/ec2"
   ami_id          = "ami-00f251754ac5da7f0"
-  instance_type   = "t2.nano"
+  instance_type   = "t2.micro"
   subnet_id       = element(module.vpc.public_subnet_ids, 0)
   environment     = "prod"
   depends_on      = [module.vpc, module.ssh-key-pairs]
